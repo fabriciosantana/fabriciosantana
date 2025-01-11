@@ -1,4 +1,3 @@
-# Olá, eu sou o Fabricio Santana! 👋
 # Hello, I am Fabricio Santana! 👋
 
 ## About me
