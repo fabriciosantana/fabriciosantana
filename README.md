@@ -13,6 +13,6 @@ Sou um desenvolvedor apaixonado por tecnologia e inovação. Tenho experiência 
 ## Contato
 
 - **Email:** [fabricio.santana@gmail.com](mailto:fabricio.santana@gmail.com)
-- **LinkedIn:** [Seu Perfil](https://www.linkedin.com/in/fabriciofsantana)
+- **LinkedIn:** [Fabricio Santana](https://www.linkedin.com/in/fabriciofsantana)
 
 Obrigado por visitar meu perfil! 😊
