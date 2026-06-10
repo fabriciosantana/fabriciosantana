@@ -3,7 +3,7 @@
 Tecnologia, educação e IA aplicada para transformar ideias em soluções práticas.
 
 [![GitHub](https://img.shields.io/badge/GitHub-fabriciosantana-181717?style=flat&logo=github)](https://github.com/fabriciosantana)
-[![Website](https://img.shields.io/badge/Website-guardadoria.com.br-0A66C2?style=flat&logo=google-chrome&logoColor=white)](https://www.guardadoria.com.br)
+[![Website](https://img.shields.io/badge/Website-fabriciosantana.github.io-0A66C2?style=flat&logo=google-chrome&logoColor=white)](https://fabriciosantana.github.io)
 [![Brasil](https://img.shields.io/badge/Local-Brasil-009739?style=flat)](https://github.com/fabriciosantana)
 
 Sou professor e profissional de tecnologia no Brasil, com interesse especial em IA agêntica, engenharia de software, educação em computação e desenvolvimento de soluções digitais. Gosto de conectar fundamentos sólidos com experimentação: do ensino de programação e qualidade de software a projetos com IA, RAG, automação e produtos web.
