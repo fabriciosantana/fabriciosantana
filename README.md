@@ -28,7 +28,6 @@ Sou professor e profissional de tecnologia no Brasil, com interesse especial em 
 
 - [poo](https://github.com/fabriciosantana/poo) - material da disciplina de Programação Orientada a Objetos, com foco em Java e fundamentos de POO.
 - [stsw](https://github.com/fabriciosantana/stsw) - conteúdos de Segurança e Teste de Software para graduação em Engenharia de Software.
-- [lyric-mind](https://github.com/fabriciosantana/lyric-mind) - sistema de recomendação musical com abordagem RAG.
 - [idp-marp-slides](https://github.com/fabriciosantana/idp-marp-slides) - slides e materiais de apoio para disciplinas ministradas no IDP.
 
 ## Estatísticas
