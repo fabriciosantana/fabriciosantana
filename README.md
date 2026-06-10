@@ -1,21 +1,21 @@
 # Fabricio Fernandes Santana
 
-Tecnologia, educação e IA aplicada para transformar ideias em soluções práticas.
+Technology, education, and applied AI to turn ideas into practical solutions.
 
 [![GitHub](https://img.shields.io/badge/GitHub-fabriciosantana-181717?style=flat&logo=github)](https://github.com/fabriciosantana)
 [![Website](https://img.shields.io/badge/Website-fabriciosantana.github.io-0A66C2?style=flat&logo=google-chrome&logoColor=white)](https://fabriciosantana.github.io)
-[![Brasil](https://img.shields.io/badge/Local-Brasil-009739?style=flat)](https://github.com/fabriciosantana)
+[![Brazil](https://img.shields.io/badge/Location-Brazil-009739?style=flat)](https://github.com/fabriciosantana)
 
-Sou professor e profissional de tecnologia no Brasil, com interesse especial em IA agêntica, engenharia de software, educação em computação e desenvolvimento de soluções digitais. Gosto de conectar fundamentos sólidos com experimentação: do ensino de programação e qualidade de software a projetos com IA, RAG, automação e produtos web.
+I am a technology professional and professor based in Brazil, with a special interest in agentic AI, software engineering, computer science education, and digital product development. I enjoy connecting solid fundamentals with experimentation: from teaching programming and software quality to building projects with AI, RAG, automation, and web products.
 
-## Foco atual
+## Current Focus
 
-- IA agêntica, RAG e aplicações inteligentes.
-- Engenharia de software, testes, segurança e boas práticas.
-- Educação em computação, materiais didáticos e ambientes de aprendizagem.
-- Prototipação de produtos digitais com foco em utilidade real.
+- Agentic AI, RAG, and intelligent applications.
+- Software engineering, testing, security, and good practices.
+- Computer science education, learning materials, and teaching environments.
+- Digital product prototyping with a focus on real-world usefulness.
 
-## Tecnologias
+## Technologies
 
 ![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=openjdk&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
@@ -24,19 +24,19 @@ Sou professor e profissional de tecnologia no Brasil, com interesse especial em 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white)
 
-## Projetos em destaque
+## Featured Projects
 
-- [poo](https://github.com/fabriciosantana/poo) - material da disciplina de Programação Orientada a Objetos, com foco em Java e fundamentos de POO.
-- [stsw](https://github.com/fabriciosantana/stsw) - conteúdos de Segurança e Teste de Software para graduação em Engenharia de Software.
-- [idp-marp-slides](https://github.com/fabriciosantana/idp-marp-slides) - slides e materiais de apoio para disciplinas ministradas no IDP.
+- [poo](https://github.com/fabriciosantana/poo) - course material for Object-Oriented Programming, focused on Java and OOP fundamentals.
+- [stsw](https://github.com/fabriciosantana/stsw) - Software Security and Testing content for undergraduate Software Engineering students.
+- [idp-marp-slides](https://github.com/fabriciosantana/idp-marp-slides) - slides and support materials for courses taught at IDP.
 
-## Estatísticas
+## Stats
 
 <p>
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=fabriciosantana&show_icons=true&hide_title=true&hide_border=true&theme=default" alt="Estatísticas do GitHub de Fabricio Santana" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fabriciosantana&layout=compact&hide_title=true&hide_border=true&langs_count=6" alt="Linguagens mais usadas por Fabricio Santana no GitHub" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=fabriciosantana&show_icons=true&hide_title=true&hide_border=true&theme=default" alt="Fabricio Santana's GitHub stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fabriciosantana&layout=compact&hide_title=true&hide_border=true&langs_count=6" alt="Fabricio Santana's most used languages on GitHub" />
 </p>
 
 ---
 
-Aberto a conversas sobre IA aplicada, ensino de tecnologia, engenharia de software e projetos que aproximem pesquisa, produto e impacto.
+Open to conversations about applied AI, technology education, software engineering, and projects that connect research, product, and impact.
