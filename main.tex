@@ -1,0 +1,373 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+% CV - Fabricio Santana
+% Based on the two-column LaTeX structure shared by the user.
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+\documentclass[10pt,A4,english]{article}
+
+%----------------------------------------------------------------------------------------
+% ENCODING
+%----------------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[USenglish]{isodate}
+\usepackage[numbers]{natbib}
+\usepackage{xstring, xifthen}
+\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage{changepage}
+
+%----------------------------------------------------------------------------------------
+% FONT
+%----------------------------------------------------------------------------------------
+\usepackage[default]{raleway}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{moresize}
+
+%----------------------------------------------------------------------------------------
+% ICONS
+%----------------------------------------------------------------------------------------
+\usepackage{fontawesome}
+
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+\newcommand{\icon}[3] {
+	\makebox(#2, #2){\textcolor{maincol}{\csname fa#1\endcsname}}
+}
+
+\newcommand{\icontext}[4]{
+	\vcenteredhbox{\icon{#1}{#2}{#3}} \hspace{2pt} \parbox{0.9\mpwidth}{\textcolor{#4}{#3}}
+}
+
+\newcommand{\iconhref}[5]{
+    \vcenteredhbox{\icon{#1}{#2}{#5}} \hspace{2pt} \href{#4}{\textcolor{#5}{#3}}
+}
+
+\newcommand{\iconemail}[5]{
+    \vcenteredhbox{\icon{#1}{#2}{#5}} \hspace{2pt} \href{mailto:#4}{\textcolor{#5}{#3}}
+}
+
+%----------------------------------------------------------------------------------------
+% PAGE LAYOUT
+%----------------------------------------------------------------------------------------
+\usepackage{paracol}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc}
+\usepackage{lmodern}
+\usepackage{multicol}
+\usepackage{atbegshi}
+\usepackage[a4paper]{geometry}
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
+\pagestyle{empty}
+\setlength{\parindent}{0mm}
+
+%----------------------------------------------------------------------------------------
+% TABLE / GRAPHICS / COLORS
+%----------------------------------------------------------------------------------------
+\usepackage{array}
+\newcolumntype{x}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{ragged2e}
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+\usepackage{transparent}
+\usepackage{color}
+
+\definecolor{maincol}{RGB}{64,64,64}
+\definecolor{darkcol}{RGB}{70,70,70}
+\definecolor{lightcol}{RGB}{245,245,245}
+\definecolor{accentcol}{RGB}{59,77,97}
+
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
+
+%============================================================================%
+% CV COMMANDS
+%============================================================================%
+
+\newcommand{\cvlist}[1] {
+	\begin{itemize}{#1}\end{itemize}
+}
+
+\newcommand{\cvtext}[1] {
+	\noindent\parbox{\mpwidth}{\RaggedRight #1}
+}
+
+\newcommand{\cvtextsmall}[1] {
+	\begin{tabular*}{0.8\mpwidth}{p{0.8\mpwidth}}
+		\parbox{0.8\mpwidth}{#1}
+	\end{tabular*}
+}
+
+\newcommand{\cvsection}[1] {
+	\vspace{12pt}
+	\cvtext{
+		\textbf{\LARGE{\textcolor{darkcol}{#1}}}\\[-4pt]
+		\textcolor{accentcol}{ \rule{0.2\textwidth}{1.5pt} } \\
+	}
+}
+
+\newcommand{\cvsectionsmall}[1] {
+	\vspace{12pt}
+	\cvtext{
+		\textbf{\Large{\textcolor{darkcol}{#1}}}\\[-4pt]
+		\textcolor{accentcol}{ \rule{0.2\textwidth}{1.5pt} } \\
+	}
+}
+
+\newcommand{\cvheadline}[1] {
+	\vspace{16pt}
+	\cvtext{
+		\textbf{\Huge{\textcolor{accentcol}{#1}}}\\[-4pt]
+	}
+}
+
+\newcommand{\cvsubheadline}[1] {
+	\vspace{16pt}
+	\cvtext{
+		\textbf{\huge{\textcolor{darkcol}{#1}}}\\[-4pt]
+	}
+}
+
+\newcommand{\cvskill}[3] {
+	\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth} r}
+ 		\textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
+	\end{tabular*}%
+	\hspace{4pt}
+	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
+		\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.15);
+		\fill [accentcol] (0,0) rectangle (#3\mpwidth, 0.15);
+  	\end{tikzpicture}%
+}
+
+\newcommand{\cvevent}[7] {
+	\parbox{\mpwidth}{
+		\begin{tabular*}{1\mpwidth}{p{0.66\mpwidth} r}
+	 		\textcolor{black}{\textbf{#2}} & \colorbox{accentcol}{\makebox[0.32\mpwidth]{\textcolor{white}{\textbf{#1}}}} \\
+			\textcolor{maincol}{#3} & \\
+		\end{tabular*}\\[7pt]
+		\ifthenelse{\isempty{#4}}{}{
+			\cvtext{#4}\\
+		}
+	}
+	\vspace{10pt}
+}
+
+\newcommand{\cvmetaevent}[4] {
+	\begingroup
+	\setlength{\emergencystretch}{1em}
+	\ifthenelse{\isempty{#1}}{}{\cvtext{\textbf{#1}}\\[1pt]}
+	\ifthenelse{\isempty{#2}}{}{\cvtext{\textbf{#2}}\\[1pt]}
+	\ifthenelse{\isempty{#3}}{}{\cvtext{\small\textcolor{maincol}{#3}}\\[1pt]}
+	\ifthenelse{\isempty{#4}}{}{\cvtext{#4}\\[2pt]}
+	\endgroup
+}
+
+%============================================================================%
+% DOCUMENT CONTENT
+%============================================================================%
+
+\begin{document}
+
+\columnratio{0.31}
+\setlength{\columnsep}{2.2em}
+\setlength{\columnseprule}{4pt}
+\colseprulecolor{white}
+
+\newpage
+
+\colseprulecolor{lightcol}
+\columnratio{0.31}
+\setlength{\columnsep}{2.2em}
+\setlength{\columnseprule}{4pt}
+
+\begin{paracol}{2}
+
+%---------------------------------------------------------------------------------------
+% LEFT COLUMN
+%---------------------------------------------------------------------------------------
+\begin{leftcolumn}
+
+\fcolorbox{white}{white}{
+\begin{minipage}[c][3.35cm][c]{1\mpwidth}
+	\LARGE{\textbf{\textcolor{maincol}{Fabricio Santana}}} \\[2pt]
+	\normalsize{\textcolor{maincol}{Software Engineering \textbar{} Professor}} \\[4pt]
+	\icontext{MobilePhone}{16}{+55 61 9 8233 6222}{black}\\[2pt]
+	\iconemail{Envelope}{16}{fabricio.santana@gmail.com}{fabricio.santana@gmail.com}{blue}\\[2pt]
+	\iconhref{Linkedin}{16}{fabriciofsantana}{https://www.linkedin.com/in/fabriciofsantana/}{blue}\\[2pt]
+	\iconhref{Github}{16}{fabriciosantana}{https://github.com/fabriciosantana}{blue}
+\end{minipage}} \\
+
+%---------------------------------------------------------------------------------------
+% EDUCATION
+%---------------------------------------------------------------------------------------
+\cvsection{Education}
+\vspace{4pt}
+
+\cvmetaevent
+{Current}
+{M.Sc. in Data Science and Artificial Intelligence}
+{Institute of Teaching, Development and Research (IDP)}
+{In progress}
+
+\cvmetaevent
+{2026}
+{Postgraduate Specialization in Natural Language Processing}
+{Federal University of Goiás (UFG)}
+{Final paper: Practical application of retrieval-augmented generation (RAG) to the analysis of parliamentary speeches delivered in the plenary of the Federal Senate of Brazil during the 56th Legislature (2019-2023).}
+
+\cvmetaevent
+{2021}
+{Postgraduate in New Technologies, Digital Transformation and Agility}
+{Fundacao Instituto de Administracao (FIA)}
+{}
+
+\cvmetaevent
+{2019}
+{Postgraduate in Information Technology Applied to the Legislative Branch}
+{Brazilian Legislative Institute (ILB)}
+{Final paper: Natural Language Processing applied to legislative writing for word prediction.}
+
+\cvmetaevent
+{2019}
+{Bachelor of Laws}
+{University Center of Brasilia (UniCEUB)}
+{Bachelor's thesis: \href{https://repositorio.uniceub.br/jspui/handle/prefix/13683}{\textcolor{blue}{Contributions of formal and material legistics to legal-parliamentary activity}}.}
+
+\cvmetaevent
+{2008}
+{Computer Science (B.Sc.)}
+{Federal University of Rio de Janeiro (UFRJ)}
+{Bachelor's thesis: \href{https://buscaintegrada.ufrj.br/Record/aleph-UFR01-000654346}{\textcolor{blue}{Human-machine interaction systems through voice}}.}
+
+%---------------------------------------------------------------------------------------
+% TEACHING
+%---------------------------------------------------------------------------------------
+\cvsection{Teaching}
+
+\cvmetaevent
+{Undergraduate Courses}
+{Computer Science and Software Engineering}
+{}
+{Object-Oriented Programming with Java; Software Security; Software Testing; Computational Thinking; applied software engineering practices.}
+
+\cvmetaevent
+{Open Course Repositories}
+{}
+{}
+{\href{https://github.com/fabriciosantana/poo}{\textcolor{blue}{Object-Oriented Programming with Java}}\\
+\href{https://github.com/fabriciosantana/stsw}{\textcolor{blue}{Software Security and Testing}}}
+
+%---------------------------------------------------------------------------------------
+% TECHNICAL FOCUS
+%---------------------------------------------------------------------------------------
+\cvsection{Technical Focus}
+
+\cvtext{
+\textbf{Backend:} Java, Spring Boot, REST APIs\\[2pt]
+\textbf{Frontend:} React, JavaScript, HTML, CSS\\[2pt]
+\textbf{Databases:} PostgreSQL, Oracle\\[2pt]
+\textbf{Quality:} JUnit, Cucumber, Playwright, Jasmine, SonarQube\\[2pt]
+\textbf{Observability:} Grafana, OpenSearch\\[2pt]
+\textbf{AI/NLP:} Python, RAG, semantic search, transcription, classification, text generation\\[2pt]
+\textbf{Practices:} Scrum, BDD, software architecture, requirements analysis, DevOps
+}
+
+\end{leftcolumn}
+
+%---------------------------------------------------------------------------------------
+% RIGHT COLUMN
+%---------------------------------------------------------------------------------------
+\begin{rightcolumn}
+
+%---------------------------------------------------------------------------------------
+% PROFILE
+%---------------------------------------------------------------------------------------
+\cvsection{Biography}
+\\[6pt]
+\cvtext{
+Fabricio has experience delivering software and digital solutions across the airline and financial services industries and the Brazilian public sector. At the Brazilian Federal Senate, he has led multidisciplinary teams in the development and implementation of critical systems, including the \href{https://www12.senado.leg.br/noticias/materias/2021/02/08/sistema-de-deliberacao-remota-do-senado-pode-se-tornar-permanente}{\textcolor{blue}{Remote Deliberation System}}, the digital transformation of the legislative process, and the adoption of artificial intelligence in legislative workflows.
+\\[6pt]
+In addition to his public-sector experience, Fabricio has entrepreneurial experience as Co-Founder and CTO of a technology startup, where he secured pre-seed venture capital investment and led the development and launch of a digital product.
+\\[6pt]
+He also has a strong hands-on technical background in software engineering, especially in the development of modern web systems using Java, Spring Boot, React, PostgreSQL and Oracle databases, and observability tools such as Grafana. 
+\\[6pt]
+This technical background is complemented by his experience as an undergraduate professor, teaching subjects related to Object-Oriented Programming with Java, Software Security, Software Testing, Computational Thinking, and applied software engineering practices.
+\\[6pt]
+Fabricio holds degrees in Computer Science and Law, along with postgraduate qualifications in Information Technology Applied to the Legislative Branch, Digital Law, Digital Transformation, and Natural Language Processing. He is currently pursuing a Master's degree in Public Administration, focused on Data Science and Artificial Intelligence.
+
+}
+
+%---------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%---------------------------------------------------------------------------------------
+\vspace{1pt}
+\cvsection{Work experience}
+\vspace{1pt}
+
+\cvevent
+{2024 - Present}
+{Undergraduate Professor \textbar{} IDP}
+{}
+{Teaches undergraduate subjects in Computer Science and Software Engineering, especially Object-Oriented Programming with Java, Software Security, and Software Testing. Course materials are openly maintained on GitHub: \href{https://github.com/fabriciosantana/poo}{\textcolor{blue}{poo}} and \href{https://github.com/fabriciosantana/stsw}{\textcolor{blue}{stsw}}.}
+{}
+{}
+{}
+
+\cvevent
+{04/2011 - Present}
+{Head of Legislative IT \textbar{} Federal Senate of Brazil}
+{}
+{Since 2020, he has led a team of over 60 software engineers responsible for critical systems that support the legislative process at the Federal Senate of Brazil, including the Remote Deliberation System, the Digital Legislative Process Program, the \textit{Senado Digital} mobile application, and AI initiatives for transcription, facial recognition, semantic search, document classification, and text generation. From 2011 to 2020, he held technical and management roles in software development, system operations, and team coordination.}
+{}
+{}
+{}
+
+\cvevent
+{03/2021 - 10/2024}
+{Co-Founder \& CTO \textbar{} Guardadoria}
+{}
+{Co-founded Guardadoria, a deathtech startup created to help families organize personal records, preserve memories, and plan end-of-life and estate-related matters. The idea emerged from a personal experience and was developed through the Antler cohort, where the business model was refined and the company secured pre-seed investment. As Co-Founder and CTO, he led the product strategy, technical architecture, and development of the platform, taking the solution from ideation to launch. The company was later discontinued after not reaching a sustainable and profitable business model.}
+{}
+{}
+{}
+
+\cvevent
+{04/2011 - 04/2020}
+{Technical and Management Roles \textbar{} Federal Senate of Brazil}
+{}
+{Held several technical and management positions before becoming Head of Legislative IT, with responsibilities in requirements analysis, software design, development, integration, system operation, and team coordination. As Deputy CTO, contributed to strategic technology management, including agile methods, DevOps, cloud adoption, mobile development, artificial intelligence initiatives, contracts, budget planning, and governance of large-scale IT operations.}
+{}
+{}
+{}
+
+\cvevent
+{03/2008 - 04/2011}
+{Software Development Manager \textbar{} BTG Pactual}
+{}
+{Led the planning, establishment, and management of a software factory. Responsibilities included managing contracts and SLAs with technology providers, defining development processes, software architecture guidelines, and engineering standards, as well as recruiting and training software engineers to support growth and operational excellence.}
+{}
+{}
+{}
+
+\cvevent
+{08/2006 - 03/2008}
+{Software Engineer \textbar{} Electronic Data Systems / American Airlines}
+{}
+{Worked on systems analysis, requirements analysis, design, development, integration, and support for American Airlines systems. After technical training in Texas, USA, he transferred knowledge to colleagues in Argentina, contributing to cross-cultural collaboration, process improvement, and alignment with international development standards.}
+{}
+{}
+{}
+
+\end{rightcolumn}
+\end{paracol}
+
+\end{document}
