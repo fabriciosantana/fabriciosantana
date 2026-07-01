@@ -104,32 +104,6 @@ I am interested in projects that connect:
 
 ---
 
-## GitHub as a Learning and Evidence Space
-
-On this profile, I try to organize repositories that show:
-
-- what I am teaching
-- what I am studying
-- what I am building
-- how I document ideas
-- how I transform learning into public artifacts
-
-Some repositories are polished projects. Others are teaching materials, experiments, or works in progress. I value clarity, documentation, reproducibility, and honest next steps.
-
----
-
-## Open to Conversations About
-
-- Applied AI and agentic systems
-- RAG and intelligent applications
-- Software engineering education
-- Java, testing, security, and backend development
-- Digital product prototyping
-- Technology for public-sector transformation
-- Projects that connect research, product, and impact
-
----
-
 ## Stats
 
 <p>
@@ -137,10 +111,3 @@ Some repositories are polished projects. Others are teaching materials, experime
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fabriciosantana&layout=compact&hide_title=true&hide_border=true&langs_count=6" alt="Fabricio Santana's most used languages on GitHub" />
 </p>
 
----
-
-## Contact
-
-- GitHub: [github.com/fabriciosantana](https://github.com/fabriciosantana)
-- Website: [fabriciosantana.github.io](https://fabriciosantana.github.io)
-- LinkedIn: [linkedin.com/in/fabriciofsantana](https://linkedin.com/in/fabriciofsantana)
